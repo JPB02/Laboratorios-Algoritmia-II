@@ -1,15 +1,3 @@
-'''
-
-Implemente uma função que calcula a área de um mapa que é acessível por
-um robot a partir de um determinado ponto.
-O mapa é quadrado e representado por uma lista de strings, onde um '.' representa
-um espaço vazio e um '*' um obstáculo.
-O ponto inicial consistirá nas coordenadas horizontal e vertical, medidas a 
-partir do canto superior esquerdo.
-O robot só consegue movimentar-se na horizontal ou na vertical. 
-
-'''
-
 def is_valid_move (x, y, size, mapa):
 	return (min(x, y) >= 0) and (max(x, y) < size) and (mapa[y][x] != '*')
 
@@ -39,14 +27,3 @@ def area(p,mapa):
 				map_area += 1
 				queue.append((nx,ny))
 	return map_area
-
-
-
-mapa = ["..*..",
-        ".*.*.",
-        "*....",
-        ".*.*.",
-        "..*.."]
-
-print("Output: " , area((3,2),mapa))
-print("Solução: " + '12')
