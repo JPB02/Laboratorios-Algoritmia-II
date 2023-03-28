@@ -35,3 +35,4 @@ def caminho(mapa):
 				path[(nx, ny)] = path[(x, y)] + d
 				queue.append((nx, ny))
 	return (path[end])
+	
